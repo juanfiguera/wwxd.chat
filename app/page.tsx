@@ -754,13 +754,13 @@ export default function Page() {
                 <span style={{ color: '#6b6a60' }}># clone &amp; run wwxd locally</span>
               </div>
               <div>
-                <span style={{ color: '#5ad17a' }}>$</span> git clone github.com/juanfiguera/wwxd
+                <span style={{ color: '#5ad17a' }}>$</span>{' '}git clone github.com/juanfiguera/wwxd
               </div>
               <div>
-                <span style={{ color: '#5ad17a' }}>$</span> cd wwxd &amp;&amp; pnpm install
+                <span style={{ color: '#5ad17a' }}>$</span>{' '}cd wwxd &amp;&amp; pnpm install
               </div>
               <div>
-                <span style={{ color: '#5ad17a' }}>$</span> pnpm dev{' '}
+                <span style={{ color: '#5ad17a' }}>$</span>{' '}pnpm dev{' '}
                 <span style={{ color: '#6b6a60' }}>— ready on :3000</span>
               </div>
             </div>
