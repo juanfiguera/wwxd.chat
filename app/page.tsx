@@ -760,14 +760,6 @@ export default function Page() {
                 <GhIcon size={18} />
                 View on GitHub
               </a>
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 rounded-full bg-transparent px-5 py-3 font-display text-[16px] font-bold text-white shadow-[inset_0_0_0_2px_rgba(255,255,255,0.4)] transition hover:bg-white hover:text-[var(--ink)]"
-              >
-                View on GitHub
-              </a>
             </div>
           </div>
           <div>
@@ -791,8 +783,17 @@ export default function Page() {
                 <span style={{ color: '#f4c64a' }}>✦</span> 9 personas seeded · 3 rooms ready
               </div>
             </div>
-            <div className="mt-6 flex justify-center gap-1.5">
-              {[CAST[4], CAST[6], CAST[0], CAST[2], CAST[7]].map((c, i) => (
+            {/* Subset lineup. Steve Jobs's ink (#16140d) would vanish
+             * against bg-[var(--dark)], so we recolor him to teal in
+             * this lineup only. */}
+            <div className="mt-6 flex justify-start gap-1.5">
+              {[
+                { ...CAST[3], color: 'var(--c-teal)' },
+                CAST[6],
+                CAST[0],
+                CAST[2],
+                CAST[7],
+              ].map((c, i) => (
                 <span
                   key={i}
                   className="wwxd-bob"
@@ -819,9 +820,7 @@ export default function Page() {
             }}
           >
             So… what{' '}
-            <span className="italic" style={{ color: 'var(--accent)' }}>
-              would
-            </span>{' '}
+            <span style={{ color: 'var(--accent)' }}>would</span>{' '}
             they do?
           </h2>
           <p className="mx-auto mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
