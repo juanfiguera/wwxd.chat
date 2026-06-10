@@ -118,7 +118,7 @@ const WALL_PERSONAS: { name: string; title: string; color: string; crown: Crown 
   { name: 'Marie Kondo',    title: 'Joy & order',                  color: '#ff5c8a', crown: 'sprout'  },
 ];
 
-const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL ?? 'https://github.com/wwxd/wwxd';
+const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL ?? 'https://github.com/juanfiguera/wwxd';
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://app.wwxd.chat';
 
 // ────────────────── small SVG components ──────────────────
@@ -329,29 +329,13 @@ export default function Page() {
           </p>
           <div className="flex flex-wrap justify-center" style={{ gap: 13, marginTop: 30 }}>
             <a
-              href={APP_URL}
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noreferrer noopener"
               className="inline-flex items-center font-display font-bold text-white transition hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(20,18,10,0.26)]"
               style={{
                 gap: 9,
                 background: 'var(--ink)',
-                borderRadius: 'var(--pill)',
-                padding: '14px 24px',
-                fontSize: 16,
-                lineHeight: 1,
-              }}
-            >
-              Start chatting
-              <ArrowRight />
-            </a>
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center font-display font-bold text-[var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
-              style={{
-                gap: 9,
-                background: '#fff',
-                boxShadow: 'inset 0 0 0 2px var(--ink)',
                 borderRadius: 'var(--pill)',
                 padding: '14px 24px',
                 fontSize: 16,
@@ -602,7 +586,7 @@ export default function Page() {
                 marginTop: 14,
               }}
             >
-              A cast of thousands, in AI.
+              Bring anyone to the table.
             </h2>
             <p className="mx-auto mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
               If they&apos;ve left a public trail, wwxd can render an AI impression. Start with
@@ -770,7 +754,7 @@ export default function Page() {
                 <span style={{ color: '#6b6a60' }}># clone &amp; run wwxd locally</span>
               </div>
               <div>
-                <span style={{ color: '#5ad17a' }}>$</span> git clone github.com/wwxd/wwxd
+                <span style={{ color: '#5ad17a' }}>$</span> git clone github.com/juanfiguera/wwxd
               </div>
               <div>
                 <span style={{ color: '#5ad17a' }}>$</span> cd wwxd &amp;&amp; pnpm install
@@ -778,9 +762,6 @@ export default function Page() {
               <div>
                 <span style={{ color: '#5ad17a' }}>$</span> pnpm dev{' '}
                 <span style={{ color: '#6b6a60' }}>— ready on :3000</span>
-              </div>
-              <div className="mt-2">
-                <span style={{ color: '#f4c64a' }}>✦</span> 9 personas seeded · ready in seconds
               </div>
             </div>
             {/* Subset lineup. Steve Jobs's ink (#16140d) would vanish
@@ -829,19 +810,13 @@ export default function Page() {
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3">
             <a
-              href={APP_URL}
-              className="inline-flex items-center gap-2 rounded-full bg-[var(--ink)] px-6 py-3.5 font-display text-[16px] font-bold text-white transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-sm)]"
-            >
-              Start chatting
-            </a>
-            <a
               href={GITHUB_URL}
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 font-display text-[16px] font-bold text-[var(--ink)] shadow-[inset_0_0_0_2px_var(--ink)] transition hover:bg-[var(--ink)] hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full bg-[var(--ink)] px-6 py-3.5 font-display text-[16px] font-bold text-white transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-sm)]"
             >
               <GhIcon size={18} />
-              GitHub
+              View on GitHub
             </a>
           </div>
         </div>
