@@ -760,6 +760,10 @@ export default function Page() {
                 <span style={{ color: '#5ad17a' }}>$</span>{' '}cd wwxd &amp;&amp; pnpm install
               </div>
               <div>
+                <span style={{ color: '#5ad17a' }}>$</span>{' '}cp .env.example .env.local{' '}
+                <span style={{ color: '#6b6a60' }}># add your API keys</span>
+              </div>
+              <div>
                 <span style={{ color: '#5ad17a' }}>$</span>{' '}pnpm dev{' '}
                 <span style={{ color: '#6b6a60' }}>— ready on :3000</span>
               </div>
