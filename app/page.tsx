@@ -62,12 +62,12 @@ const ROOMS: Room[] = [
       { name: 'Jon Stewart',    color: '#f1592b', crown: 'spikes' },
       { name: 'Dave Chappelle', color: '#c2410c', crown: 'flat'   },
     ],
-    sub: "3 personas · late-night writers' table",
-    ask: 'Give me a bit about airport security.',
+    sub: "3 personas · stand-up's sharpest",
+    ask: 'Roast self-checkout.',
     replies: [
-      { name: 'Trevor Noah',    color: '#7b5bff', crown: 'horns',  text: "It's the one place we all agree to be treated like suspects — and tip nobody." },
-      { name: 'Jon Stewart',    color: '#f1592b', crown: 'spikes', text: 'Take off your shoes, your belt, your dignity — sir, the belt was the dignity.' },
-      { name: 'Dave Chappelle', color: '#c2410c', crown: 'flat',   text: "I watched a man argue with a bin. The bin won. Bin's undefeated." },
+      { name: 'Trevor Noah',    color: '#7b5bff', crown: 'horns',  text: "I'm having an argument with a piece of plastic and I'm losing. Over yogurt I don't even like." },
+      { name: 'Jon Stewart',    color: '#f1592b', crown: 'spikes', text: "They didn't invent self-checkout. They invented the unpaid retail apprenticeship. Then they fired the trainer." },
+      { name: 'Dave Chappelle', color: '#c2410c', crown: 'flat',   text: "Machine starts hollering 'unexpected item in bagging area.' Brother, it's a banana. I bought it. From YOU." },
     ],
   },
   {
@@ -717,14 +717,14 @@ export default function Page() {
               Yours to fork.
             </h2>
             <p className="mt-4 text-[19px] font-medium leading-[1.5] text-[#bdbab0]">
-              No black box. wwxd is MIT-licensed — read the prompts, bring your own model, run it
+              No black box. wwxd is MIT-licensed. Read the prompts, pick your provider, run it
               on your own machine, and send a PR when you make it better.
             </p>
             <div className="mt-8 flex flex-wrap gap-8">
               {[
                 { b: 'MIT', s: 'license' },
                 { b: 'Tweets · Essays · YouTube', s: 'sources' },
-                { b: 'Anthropic · OpenAI · Ollama', s: 'BYO model' },
+                { b: 'Anthropic · OpenAI · Ollama', s: 'any provider' },
               ].map(({ b, s }) => (
                 <div key={s} className="flex flex-col">
                   <b className="font-display text-[28px] font-extrabold text-white">{b}</b>
