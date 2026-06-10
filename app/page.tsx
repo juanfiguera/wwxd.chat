@@ -481,7 +481,7 @@ export default function Page() {
                 <div>
                   <b className="font-display text-[16px]">Pick your cast</b>
                   <p className="mt-1 text-[14px] font-medium leading-[1.45] text-[var(--ink-soft)]">
-                    Drag any persona into a room — 2 to 12 voices.
+                    Add the personas you want — as many voices as you&apos;d like.
                   </p>
                 </div>
                 <div>
@@ -663,7 +663,7 @@ export default function Page() {
                 marginTop: 14,
               }}
             >
-              Three taps to a new AI persona.
+              Three steps to a new AI persona.
             </h2>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -678,7 +678,7 @@ export default function Page() {
                 color: 'var(--c-blue)',
                 num: 2,
                 title: 'wwxd renders an impression',
-                body: "We pull their public writing — tweets, essays, transcripts — and assemble an AI rendition of how they think, talk, and argue. Quirks and catchphrases included. Still an AI, not them.",
+                body: "We pull their public writing — tweets, essays, transcripts — and assemble an AI rendition of how they think, talk, and argue. Still an AI, not them.",
               },
               {
                 color: 'var(--c-orange)',
@@ -739,7 +739,7 @@ export default function Page() {
             <div className="mt-8 flex flex-wrap gap-8">
               {[
                 { b: 'MIT', s: 'license' },
-                { b: '6', s: 'ingestors' },
+                { b: 'Tweets · Essays · YouTube', s: 'sources' },
                 { b: 'Anthropic · OpenAI · Ollama', s: 'BYO model' },
               ].map(({ b, s }) => (
                 <div key={s} className="flex flex-col">
@@ -780,7 +780,7 @@ export default function Page() {
                 <span style={{ color: '#6b6a60' }}>— ready on :3000</span>
               </div>
               <div className="mt-2">
-                <span style={{ color: '#f4c64a' }}>✦</span> 9 personas seeded · 3 rooms ready
+                <span style={{ color: '#f4c64a' }}>✦</span> 9 personas seeded · ready in seconds
               </div>
             </div>
             {/* Subset lineup. Steve Jobs's ink (#16140d) would vanish
