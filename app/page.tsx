@@ -589,9 +589,9 @@ export default function Page() {
               Bring anyone to the table.
             </h2>
             <p className="mx-auto mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
-              If they&apos;ve left a public trail, wwxd can render an AI impression. Start with
-              these, or summon anyone by name. Each one is a synthesis of their writing — not the
-              real person.
+              Start with these, or summon anyone by name. With sources we synthesize their writing;
+              without, the model goes from what it knows about them. Always an AI rendition,
+              never the real person.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5">
@@ -656,13 +656,13 @@ export default function Page() {
                 color: 'var(--c-pink)',
                 num: 1,
                 title: 'Name anyone',
-                body: 'Type a name — a founder, a president, a philosopher, your favorite author. Real or historical.',
+                body: 'Type a name. Or paste an X handle. Or both. Real or historical, founder or comedian.',
               },
               {
                 color: 'var(--c-blue)',
                 num: 2,
                 title: 'wwxd renders an impression',
-                body: "We pull their public writing — tweets, essays, transcripts — and assemble an AI rendition of how they think, talk, and argue. Still an AI, not them.",
+                body: "If you give us sources (tweets, essays, YouTube transcripts), replies cite back to specific posts. If you don't, the model goes from memory. Still an AI, not them.",
               },
               {
                 color: 'var(--c-orange)',
