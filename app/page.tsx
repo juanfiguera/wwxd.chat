@@ -24,7 +24,7 @@ const CAST: CastMember[] = [
 
 const ROTATION_MS = 2400;
 
-type RoomKey = 'board' | 'cellar' | 'clarity' | 'lounge';
+type RoomKey = 'board' | 'founders' | 'stoa' | 'lounge';
 
 type Room = {
   id: RoomKey;
@@ -55,35 +55,39 @@ const ROOMS: Room[] = [
     ],
   },
   {
-    id: 'cellar',
-    name: 'The Comedy Cellar',
+    id: 'founders',
+    name: 'The Founders Club',
     members: [
-      { name: 'Trevor Noah',    color: '#7b5bff', crown: 'horns'  },
-      { name: 'Jon Stewart',    color: '#f1592b', crown: 'spikes' },
-      { name: 'Dave Chappelle', color: '#c2410c', crown: 'flat'   },
+      { name: 'Paul Graham',      color: '#b45309', crown: 'tuft'  },
+      { name: 'Patrick Collison', color: '#0ea5e9', crown: 'flat'  },
+      { name: 'Garry Tan',        color: '#10b981', crown: 'sprout' },
+      { name: 'Brian Chesky',     color: '#dc2626', crown: 'bumps' },
     ],
-    sub: "3 personas · stand-up's sharpest",
-    ask: 'Roast self-checkout.',
+    sub: '4 personas · ship-it energy',
+    ask: "What's the most underrated piece of startup advice?",
     replies: [
-      { name: 'Trevor Noah',    color: '#7b5bff', crown: 'horns',  text: "I'm having an argument with a piece of plastic and I'm losing. Over yogurt I don't even like." },
-      { name: 'Jon Stewart',    color: '#f1592b', crown: 'spikes', text: "They didn't invent self-checkout. They invented the unpaid retail apprenticeship. Then they fired the trainer." },
-      { name: 'Dave Chappelle', color: '#c2410c', crown: 'flat',   text: "Machine starts hollering 'unexpected item in bagging area.' Brother, it's a banana. I bought it. From YOU." },
+      { name: 'Paul Graham',      color: '#b45309', crown: 'tuft',  text: "Pick a problem so specific you can name the person who has it. Vague ideas attract vague effort." },
+      { name: 'Patrick Collison', color: '#0ea5e9', crown: 'flat',  text: "Hire one person better than you, before you can afford to. The signal it sends to everyone you hire after is worth ten times the salary." },
+      { name: 'Garry Tan',        color: '#10b981', crown: 'sprout', text: "Talk to ten users a week, every week, forever. Most founders stop when they 'know what to build.' That's exactly when they should keep going." },
+      { name: 'Brian Chesky',     color: '#dc2626', crown: 'bumps', text: "Imagine the 11-star version of your product. The kind people would be astonished by. Build a notch below that, not the version everyone else would settle for." },
     ],
   },
   {
-    id: 'clarity',
-    name: 'The Clarity Room',
+    id: 'stoa',
+    name: 'The Stoa',
     members: [
-      { name: 'Naval Ravikant', color: '#0e9c8e', crown: 'flat'   },
-      { name: 'Marie Kondo',    color: '#ff5c8a', crown: 'sprout' },
-      { name: 'Steve Jobs',     color: '#16140d', crown: 'tuft'   },
+      { name: 'Marcus Aurelius', color: '#a16207', crown: 'tuft' },
+      { name: 'Epictetus',       color: '#1e40af', crown: 'flat' },
+      { name: 'Seneca',          color: '#7f1d1d', crown: 'bumps' },
+      { name: 'Naval Ravikant',  color: '#0e9c8e', crown: 'flat' },
     ],
-    sub: '3 personas · cut the noise',
-    ask: "I'm doing too much and nothing feels done. Where do I start?",
+    sub: '4 personas · stoics, ancient and modern',
+    ask: "I can't stop worrying about something I can't control.",
     replies: [
-      { name: 'Naval Ravikant', color: '#0e9c8e', crown: 'flat',   text: "Most effort goes to things that don't compound. Find the one that does — cut the rest without guilt." },
-      { name: 'Marie Kondo',    color: '#ff5c8a', crown: 'sprout', text: 'Hold each commitment, one at a time. Thank the ones that no longer spark joy, then let them go.' },
-      { name: 'Steve Jobs',     color: '#16140d', crown: 'tuft',   text: 'Focus is saying no to a hundred good ideas. Pick one. Make it insanely great.' },
+      { name: 'Marcus Aurelius', color: '#a16207', crown: 'tuft',  text: "You suffer from this more than from the thing itself. The thing happens and is done. Your mind returns to it a thousand times by choice." },
+      { name: 'Epictetus',       color: '#1e40af', crown: 'flat',  text: "Ask: is it in my control? If not, take your hands off it. Worrying does not buy you any extra say." },
+      { name: 'Seneca',          color: '#7f1d1d', crown: 'bumps', text: "We suffer more in imagination than in reality. Write down what you fear will happen, then read it back. Most of it never comes." },
+      { name: 'Naval Ravikant',  color: '#0e9c8e', crown: 'flat',  text: "Anxiety is paying interest on a debt you may not owe. Set it down. If it comes due, pick it up then. Not before." },
     ],
   },
   {
@@ -119,7 +123,8 @@ const WALL_PERSONAS: { name: string; title: string; color: string; crown: Crown 
 ];
 
 const GITHUB_URL = process.env.NEXT_PUBLIC_GITHUB_URL ?? 'https://github.com/juanfiguera/wwxd';
-const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? 'https://app.wwxd.chat';
+// No hosted chat app — wwxd is self-hosted only. Every CTA points at
+// the repo so users land on the README and clone it.
 
 // ────────────────── small SVG components ──────────────────
 
@@ -615,14 +620,16 @@ export default function Page() {
               </div>
             ))}
             <a
-              href={APP_URL}
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noreferrer noopener"
               className="flex flex-col items-center justify-center gap-2 rounded-[var(--r-lg)] border border-dashed border-[#cfccc0] px-3.5 py-7 text-center text-[var(--ink-soft)] transition hover:border-[var(--ink)] hover:text-[var(--ink)]"
             >
               <div className="flex h-[54px] w-[54px] items-center justify-center rounded-full bg-[var(--paper-2)] font-display text-[30px] font-extrabold text-[var(--ink)]">
                 +
               </div>
               <div className="font-display text-[15.5px] font-bold">Add anyone</div>
-              <div className="text-[12px] font-semibold text-[var(--ink-soft)]">Summon by name</div>
+              <div className="text-[12px] font-semibold text-[var(--ink-soft)]">Clone the repo</div>
             </a>
           </div>
         </div>
