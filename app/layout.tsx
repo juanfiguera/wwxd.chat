@@ -17,6 +17,7 @@ const body = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://wwxd.chat'),
   title: 'wwxd — what would x do?',
   description:
     'Chat with an AI impression of anyone — founders, presidents, philosophers, your favorite comedian. Open source. Self-hosted.',
@@ -25,6 +26,23 @@ export const metadata: Metadata = {
     description:
       'Chat with an AI impression of anyone, then drop a few in a room together and let them argue it out.',
     type: 'website',
+    url: '/',
+    siteName: 'wwxd',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'wwxd — what would Steve Jobs do? Chat with an AI impression of anyone, then drop a few in a room together and let them argue it out.',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'wwxd — what would x do?',
+    description:
+      'Chat with an AI impression of anyone, then drop a few in a room together and let them argue it out.',
+    images: ['/og.png'],
   },
 };
 
