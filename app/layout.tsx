@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'wwxd — what would Steve Jobs do? Chat with an AI impression of anyone, then drop a few in a room together and let them argue it out.',
+        alt: 'wwxd — chat with an AI impression of anyone. Drop a few in a room together and let them argue it out.',
       },
     ],
   },
