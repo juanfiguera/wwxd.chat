@@ -425,9 +425,9 @@ export default function Page() {
                 Your own board of advisors, on demand
               </h2>
               <p className="mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
-                Ask once, and the whole room answers: agreeing, pushing back, building on each
-                other. Your personal board, on call. Every voice is an impression, never the real
-                person.
+                Start a conversation and the whole room joins in: agreeing, pushing back, building
+                on each other. Steer it wherever you want. Every voice is an impression, never the
+                real person.
               </p>
               <div className="mt-6 flex flex-wrap gap-2.5">
                 {ROOMS.map((r) => {
