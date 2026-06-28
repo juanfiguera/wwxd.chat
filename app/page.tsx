@@ -596,7 +596,7 @@ export default function Page() {
             <p className="mx-auto mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
               Start with these, or summon anyone by name. Give it their tweets and essays and
               replies point back to what they actually wrote. Skip the sources and it works from
-              memory. Either way, it&apos;s an impression, never the real person.
+              memory. Either way, it&apos;s an impression not the real person.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5">
