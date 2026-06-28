@@ -330,7 +330,7 @@ export default function Page() {
             }}
           >
             Chat with an AI impression of <b>anyone</b>: founders, presidents, philosophers,
-            your favorite comedian. Then put a few in a room and watch them spar.
+            your favorite comedian. Then put a few in a room and watch them riff.
           </p>
           <div className="flex flex-wrap justify-center" style={{ gap: 13, marginTop: 30 }}>
             <a
