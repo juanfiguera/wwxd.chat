@@ -422,9 +422,7 @@ export default function Page() {
                   marginTop: 14,
                 }}
               >
-                Don&apos;t just ask one.
-                <br />
-                Convene a room.
+                Your own board of advisors, on demand
               </h2>
               <p className="mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
                 Ask once, and the whole room answers: agreeing, pushing back, building on each
