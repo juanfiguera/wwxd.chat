@@ -45,7 +45,7 @@ const ROOMS: Room[] = [
       { name: 'Steve Jobs',     color: '#16140d', crown: 'tuft'    },
       { name: 'Warren Buffett', color: '#e0451b', crown: 'bumps'   },
     ],
-    sub: '4 personas · your personal board',
+    sub: '4 voices · your personal board',
     ask: 'Should we raise our prices?',
     replies: [
       { name: 'Elon Musk',      color: '#2e6bf6', crown: 'antenna', text: "Price to the value, not the cost. If it's 10× better, charge like it." },
@@ -329,8 +329,8 @@ export default function Page() {
               marginTop: 24,
             }}
           >
-            Chat with an AI impression of <b>anyone</b> — founders, presidents, philosophers,
-            your favorite comedian. Then drop a few in a room together and let them argue it out.
+            Chat with an AI impression of <b>anyone</b>: founders, presidents, philosophers,
+            your favorite comedian. Then put a few in a room and watch them spar.
           </p>
           <div className="flex flex-wrap justify-center" style={{ gap: 13, marginTop: 30 }}>
             <a
@@ -427,9 +427,9 @@ export default function Page() {
                 Convene a room.
               </h2>
               <p className="mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
-                Pose a question once and let a whole table of AI personas respond — agreeing,
-                pushing back, and building on each other. Your personal board, on call. Every
-                voice is an impression, never the real person.
+                Ask once, and the whole room answers: agreeing, pushing back, building on each
+                other. Your personal board, on call. Every voice is an impression, never the real
+                person.
               </p>
               <div className="mt-6 flex flex-wrap gap-2.5">
                 {ROOMS.map((r) => {
@@ -470,7 +470,7 @@ export default function Page() {
                 <div>
                   <b className="font-display text-[16px]">Pick your cast</b>
                   <p className="mt-1 text-[14px] font-medium leading-[1.45] text-[var(--ink-soft)]">
-                    Add the personas you want — as many voices as you&apos;d like.
+                    Add as many voices as you want.
                   </p>
                 </div>
                 <div>
@@ -594,9 +594,9 @@ export default function Page() {
               Bring anyone to the table.
             </h2>
             <p className="mx-auto mt-4 text-[19px] font-medium leading-[1.5] text-[var(--ink-2)]">
-              Start with these, or summon anyone by name. With sources we synthesize their writing;
-              without, the model goes from what it knows about them. Always an AI rendition,
-              never the real person.
+              Start with these, or summon anyone by name. Give it their tweets and essays and
+              replies point back to what they actually wrote. Skip the sources and it works from
+              memory. Either way, it&apos;s an impression, never the real person.
             </p>
           </div>
           <div className="mt-12 grid grid-cols-2 gap-3.5 sm:grid-cols-3 lg:grid-cols-5">
@@ -654,7 +654,7 @@ export default function Page() {
                 marginTop: 14,
               }}
             >
-              Three steps to a new AI persona.
+              Three steps to a new impression.
             </h2>
           </div>
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">
@@ -669,13 +669,13 @@ export default function Page() {
                 color: 'var(--c-blue)',
                 num: 2,
                 title: 'wwxd renders an impression',
-                body: "If you give us sources (tweets, essays, YouTube transcripts), replies cite back to specific posts. If you don't, the model goes from memory. Still an AI, not them.",
+                body: 'Give it sources (tweets, essays, YouTube transcripts) and replies cite specific posts. Skip them and it works from memory. Still an AI, not them.',
               },
               {
                 color: 'var(--c-orange)',
                 num: 3,
                 title: 'Chat, or convene a room',
-                body: 'Ask one persona for advice, or assemble a room and let them debate. You moderate.',
+                body: 'Ask one for advice, or fill a room and let them debate. You moderate.',
               },
             ].map((s) => (
               <div
@@ -893,8 +893,8 @@ export default function Page() {
             AI impressions, not the real people.
           </strong>{' '}
           wwxd produces AI-generated impressions trained on each person&apos;s publicly available
-          writing. Personas are not real, are not endorsed by the people they reference, and may
-          misrepresent their views. Don&apos;t treat outputs as quotes.
+          writing. These impressions are not real, are not endorsed by the people they reference,
+          and may misrepresent their views. Don&apos;t treat outputs as quotes.
         </div>
       </footer>
     </div>
